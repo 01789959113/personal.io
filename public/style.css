@@ -19,7 +19,6 @@ html {
 .navbar {
   font-family: var(--main-font);
 }
-
 .navbar-light .navbar-toggler {
   border-color: rgba(0, 0, 0, 1);
 }
@@ -278,6 +277,9 @@ html {
   font-size: 1.3rem;
   left: 0;
 }
+.project-section .row .img-fluid{
+  border-radius: 4px;
+}
 .project-text {
   font-size: 1.4rem;
   font-family: var(--sub-font);
@@ -337,7 +339,7 @@ html {
 }
 .form input,
 .form textarea {
-  border: 2px solid #ff8801;
+  border: 2px solid #bd7c32;;
   font-family: var(--sub-font);
   outline: none;
 }
@@ -362,7 +364,7 @@ html {
   background-color: transparent;
   color: #fff;
   outline: none;
-  border: 2px solid #ff880f;
+  border: 2px solid #bd7c32;
   border-radius: 4px;
   font-family: var(--sub-font);
 }

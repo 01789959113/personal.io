@@ -1,11 +1,10 @@
+require('dotenv').config()
 const express = require('express');
-const app = express();
 const path = require('path');
-require('./db/connect')
-const User = require('./models/model')
+const app = express();
+const connection = require('./db/connect')
 
-
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 
 
 // serving static file
@@ -20,17 +19,15 @@ app.use(express.urlencoded({ extended: false }))
 
 
 app.get('/', (req, res) => {
-    res.render('index.ejs')
+    res.render('index')
 })
 
 app.post('/', async (req, res) => {
     try {
-        const userList = new User(req.body);
         let errors = [];
         const { name, email, subject, message } = req.body;
-        // console.log(`${name} is ${email}`)
         if (!name || !email || !subject || !message) {
-            errors.push({ msg: "Please fill all the field" })
+            errors.push({ msg: "Invalid information...Fill all the fields" })
         }
         if (errors.length > 0) {
             res.render('index', {
@@ -41,8 +38,16 @@ app.post('/', async (req, res) => {
                 message
             })
         } else {
-            // saving user data into database
-            const saveUser = await userList.save()
+            //  store data into database
+            let storeData = `insert into anmslist (name, email, subject, message) values('${name}', '${email}', '${subject}', '${message}') `;
+
+            connection.query(storeData, async function (err, results) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    console.log("data stored");
+                }
+            });
             res.render('index')
         }
 

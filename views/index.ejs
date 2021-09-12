@@ -51,6 +51,7 @@
             </div>
         </div>
     </nav>
+
     <!-- header secttion -->
     <header class="header" id="home">
         <div class="header-text">
@@ -87,8 +88,8 @@
                     <i class="fas fa-laptop"></i>
                     <h5>Client Side Skill </h5>
                     <ul class="skill-list">
-                        <li class="list">HTML </li>
-                        <li class="list">CSS </li>
+                        <li class="list">HTML5 </li>
+                        <li class="list">CSS3 </li>
                         <li class="list">JavaScript </li>
                         <li class="list">Bootstrap </li>
                         <li class="list">jQuery </li>
@@ -100,7 +101,7 @@
                     <ul class="skill-list">
                         <li class="list">Node.js </li>
                         <li class="list">Express </li>
-                        <li class="list">MongoDB </li>
+                        <li class="list">MySql </li>
                     </ul>
                 </div>
             </div>
@@ -117,15 +118,17 @@
             </div>
             <div class="row gy-3">
                 <div class="col-md-12 col-12 col-lg-6 col-xxl-6">
-                    <img src="./img/realestate.jpg" alt="image is loadign" class="img-fluid">
+                    <a href="https://avo-cado.herokuapp.com/"><img src="./img/realestate.jpg" alt="image is loading"
+                            class="img-fluid"> </a>
+
                 </div>
                 <div class="col-md-12 col-12 col-lg-6 col-xxl-6">
                     <h1 class="avocado-heading">Avocado <br> <span>properties ltd. </span> </h1>
-                    <p class="project-text">Avocado Properties Ltd. is a <span>Real Estate </span> website that I
-                        created where people can check their desire flat to live or property to make their dream house.
+                    <p class="project-text">Avocado Properties Ltd. is a <span>Real Estate </span> company where people
+                        can check their desire flat to live or property to make their dream house.
                     </p>
                     <p class="project-text">This website made using Html, CSS, Bootstrap, JavaScript, jQuery, Node.js,
-                        Express, MongoDB </p>
+                        Express, MySql... </p>
                     <span class="github-link"><a href="https://github.com/01789959113/avocado.io">Github link
                         </a></span>
                     <span class="site-link"><a href="https://avo-cado.herokuapp.com/">Site link </a></span>
@@ -137,13 +140,13 @@
                         valuable time with familly and friends.
                     </p>
                     <p class="project-text">This website build using Html, CSS, Bootstrap, JavaScript, jQuery, Node.js,
-                        Express, MongoDB </p>
+                        Express, MySql...</p>
                     <span class="github-link"><a href="#">Github link
                         </a></span>
                     <span class="site-link"><a href="#">Site link </a></span>
                 </div>
                 <div class="col-md-12 col-12 col-lg-6 col-xxl-6 py-5">
-                    <img src="./img/restaurant.jpg" alt="image is loadign" class="img-fluid">
+                    <a href="#"> <img src="./img/restaurant.jpg" alt="image is loading" class="img-fluid"> </a>
                 </div>
             </div>
         </div>
@@ -164,27 +167,27 @@
                         <!-- error message -->
                         <%- include('./partials/errmsg.ejs') %>
 
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name </label>
-                            <input type="text" class="form-control" id="name" name="name"
-                            value="<%= typeof name !='undefined'? name :'' %>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email </label>
-                            <input type="email" class="form-control" id="email" name="email" 
-                            value="<%= typeof email !='undefined'? email :'' %>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="subject" class="form-label">Subject </label>
-                            <input type="text" class="form-control" id="subject" name="subject" 
-                            value="<%= typeof subject !='undefined'? subject :'' %>">
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message </label>
-                            <textarea class="form-control" id="message" name="message" rows="3" 
-                            value="<%= typeof message !='undefined'? message :'' %>"></textarea>
-                        </div>
-                        <button class="message-btn" type="submit">Send Message </button>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name </label>
+                                <input type="text" class="form-control" id="name" name="name"
+                                    value="<%= typeof name !='undefined'? name :'' %>">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email </label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    value="<%= typeof email !='undefined'? email :'' %>">
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject </label>
+                                <input type="text" class="form-control" id="subject" name="subject"
+                                    value="<%= typeof subject !='undefined'? subject :'' %>">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message </label>
+                                <textarea class="form-control" id="message" name="message" rows="3"
+                                    value="<%= typeof message !='undefined'? message :'' %>"></textarea>
+                            </div>
+                            <button class="message-btn" type="submit">Send Message </button>
                     </form>
                 </div>
                 <div class="col-md-12 col-12 col-lg-6 col-xxl-6">
