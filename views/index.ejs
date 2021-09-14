@@ -24,8 +24,11 @@
 
 <body>
 
+     <!-- error message -->
+     <%- include('./partials/errmsg.ejs') %>
+    
     <!-- navbar section -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">Anms</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -163,10 +166,6 @@
             <dvi class="row gy-3">
                 <div class="col-md-12 col-12 col-lg-6 col-xxl-6">
                     <form class="form" action="/" method="POST">
-
-                        <!-- error message -->
-                        <%- include('./partials/errmsg.ejs') %>
-
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name </label>
                                 <input type="text" class="form-control" id="name" name="name"

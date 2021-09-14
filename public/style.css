@@ -13,6 +13,15 @@ html {
 :root {
   --main-font: "Abhaya Libre", serif;
   --sub-font: "Source Sans Pro", sans-serif;
+  --bs-light-rgb: 248,249,250;
+}
+/* sticky navbar */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background: var(--bs-light-rgb);
 }
 
 /* navbar section */
@@ -62,18 +71,6 @@ html {
   background-size: cover;
   height: 100vh;
   position: relative;
-}
-.header::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  height: 100px;
-  width: 100%;
-  background: url(./img/header-mask.png) no-repeat center;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  background-size: cover;
 }
 .typejs::after {
   content: "";
@@ -526,7 +523,7 @@ html {
   }
   /* alert message */
   .alert-danger {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 @media only screen and (max-width: 375px) {

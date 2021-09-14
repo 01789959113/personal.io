@@ -27,7 +27,7 @@ app.post('/', async (req, res) => {
         let errors = [];
         const { name, email, subject, message } = req.body;
         if (!name || !email || !subject || !message) {
-            errors.push({ msg: "Invalid information...Fill all the fields" })
+            errors.push({ msg: "Form submission unsuccessfull... Try again" })
         }
         if (errors.length > 0) {
             res.render('index', {
@@ -48,6 +48,7 @@ app.post('/', async (req, res) => {
                     console.log("data stored");
                 }
             });
+            errors.push({msg: "Form submission successfull"})
             res.render('index')
         }
 

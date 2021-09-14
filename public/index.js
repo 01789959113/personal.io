@@ -1,3 +1,17 @@
+// fixed navbar
+let navbar = document.querySelector(".navbar");
+window.onscroll = function () {
+    myFunction();
+};
+
+function myFunction() {
+    if (window.scrollY > 0) {
+        navbar.classList.add("sticky");
+    } else {
+        navbar.classList.remove("sticky");
+    }
+}
+
 // type js effect
 let texts = ['Web Developer', 'Freelancer']
 let count = 0;
