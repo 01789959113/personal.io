@@ -5,6 +5,10 @@ const connection = mysql.createConnection({
   password : process.env.DB_PASS,
   database : process.env.DATABASE
 });
+// DB_HOST = localhost
+// DB_USER = root
+// DB_PASS = aNM$(%*^@)
+// DATABASE = abunaim1_anms
  
 connection.connect(function(err) {
   if (err) {
